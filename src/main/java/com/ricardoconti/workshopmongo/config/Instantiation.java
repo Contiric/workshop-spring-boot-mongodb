@@ -9,6 +9,10 @@ import org.springframework.context.annotation.Configuration;
 import com.ricardoconti.workshopmongo.domain.User;
 import com.ricardoconti.workshopmongo.repository.UserRepository;
 
+// Essa classe é responsável por inserir automaticamente dados no banco 
+// Ela vai instanciar a classe UserRepository para poder acessar os métodos delete e save
+// A partir da instanciação da classe User podemos inserir os respectivos dados 
+
 @Configuration
 public class Instantiation implements CommandLineRunner{
 	
