@@ -6,6 +6,9 @@ import org.springframework.stereotype.Repository;
 import com.ricardoconti.workshopmongo.domain.User;
 
 @Repository
+//Essa interface vai herdar da interface do Mongo
+//User - O tipo da classe domínio que o Mongo vai gerenciar
+//String id - Identificando o tipo do Id da classe de domínio User
 public interface UserRepository extends MongoRepository<User, String> {
 	
 }

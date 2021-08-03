@@ -6,7 +6,7 @@ import java.util.Objects;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-//Os objetos podem ser convertidos em bytes para ser teafegado em rede, ser gravado em arquivo
+//Os objetos podem ser convertidos em bytes para ser trafegado em rede, ser gravado em arquivo
 @Document (collection = "user")
 public class User implements Serializable { 
 

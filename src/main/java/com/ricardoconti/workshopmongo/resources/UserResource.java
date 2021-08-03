@@ -17,6 +17,7 @@ import com.ricardoconti.workshopmongo.services.UserService;
 @RequestMapping(value="/users")
 public class UserResource {
 	
+	
 	@Autowired
 	private UserService service;
 	
