@@ -1,6 +1,9 @@
 package com.ricardoconti.workshopmongo.repository;
 
+import java.util.List;
+
 import org.springframework.data.mongodb.repository.MongoRepository;
+import org.springframework.data.mongodb.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import com.ricardoconti.workshopmongo.domain.Post;
@@ -11,4 +14,6 @@ import com.ricardoconti.workshopmongo.domain.Post;
 //String id - Identificando o tipo do Id da classe de domínio User
 public interface PostRepository extends MongoRepository<Post, String> {
 	
+
+	List<Post> findByTitleContainingIgnoreCase(String text);
 }
