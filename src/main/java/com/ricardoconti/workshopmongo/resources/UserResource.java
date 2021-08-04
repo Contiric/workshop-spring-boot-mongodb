@@ -28,7 +28,6 @@ public class UserResource {
 	private UserService service;
 	
 	@RequestMapping(method = RequestMethod.GET)
-	//@GetMapping
 	public ResponseEntity <List<UserDTO>> findAll() {
 		//User maria = new User("1", "Maria Silva", "maria@gmail.com");
 		//User alex = new User("1", "Alex Pinheiro", "alex@gmail.com");
