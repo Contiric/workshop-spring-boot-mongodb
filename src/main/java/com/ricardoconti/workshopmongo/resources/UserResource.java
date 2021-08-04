@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import com.ricardoconti.workshopmongo.domain.Post;
 import com.ricardoconti.workshopmongo.domain.User;
 import com.ricardoconti.workshopmongo.dto.UserDTO;
 import com.ricardoconti.workshopmongo.services.UserService;
@@ -44,6 +45,7 @@ public class UserResource {
 		//Vai retornar uma listaDTO
 		return ResponseEntity.ok().body(listDTO);
 	}
+
 	
 	@RequestMapping(value = "/{id}",method = RequestMethod.GET)
 	public ResponseEntity <UserDTO> findById(@PathVariable String id) {
@@ -81,7 +83,15 @@ public class UserResource {
 
 	}
 	
+	@RequestMapping(value = "/{id}/posts", method = RequestMethod.GET)
+	public ResponseEntity <List<Post>> findPosts(@PathVariable String id) {
+		
+		User obj = service.findById(id);
 
+	
+		return ResponseEntity.ok().body(obj.getPosts());
+	}
+	
 	
 	
 	
