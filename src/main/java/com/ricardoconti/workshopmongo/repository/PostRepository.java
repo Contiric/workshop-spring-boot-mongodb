@@ -16,4 +16,7 @@ public interface PostRepository extends MongoRepository<Post, String> {
 	
 
 	List<Post> findByTitleContainingIgnoreCase(String text);
+	
+	@Query("{'title': {$regex: ?0, $options: 'i' } }")
+	List <Post> searchTitle (String text);
 }
